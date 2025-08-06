@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Company Homepage</h1>
+    <p>The current date and time is : {%now "DATETIME_FORMAT"%}</p>
+    <p>There are {{inventory|length}} items in inventory</p>
+    <ul>{% for i in inventory%}
+        <li>{{i}}</li>
+        {%endfor%}
+    </ul>
+            <h2> {{greetings|title}}</h2>
+</body>
+</html>
+{%comment%}yehh commment {%endcomment%}
+{%endblock%}
